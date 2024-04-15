@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Footer } from '@/components/Footer/Footer';
+import { Subscribe } from '@/components/Subscribe/Subscribe';
+import Navigation from '@/components/Navigation';
+import Breadcrumb from '@/components/Breadcrumb';
 
-const inter = Inter({ subsets: ["latin"] });
+const popins = Poppins({
+  subsets: ['latin'],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +23,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={popins.className}>
+        <Navigation />
+        <Breadcrumb backgroundImage="https://cdn.builder.io/api/v1/image/assets/TEMP/cbae173d106d5e3c06615fbc04fd6587fbaadea11121db062e267721583820da?apiKey=19dd9cda44174f2b9e30a7b65a715630&" icon="https://cdn.builder.io/api/v1/image/assets/TEMP/9c00bb7ecf148629082ef3fccb8fed93f8404fca840dc176c37820f0290b4f31?apiKey=19dd9cda44174f2b9e30a7b65a715630&" />
+        {children}
+        <LayoutFooter />
+      </body>
     </html>
   );
 }
+
+
+const LayoutFooter: React.FC = () => {
+  const socialIcons: string[] = [];
+  const logo =
+    "https://cdn.builder.io/api/v1/image/assets/TEMP/909a39a118b5bfd5a2d2ca66d8c40dfd53e721590788804aff7f73a3c7a2f225?apiKey=1d65eaa227da48a9908a318b50c4785b&";
+  const paymentIcons = [
+    "https://cdn.builder.io/api/v1/image/assets/TEMP/a91f2560c3703c5f77d35490d05d45a8c957ad47e748fda4d02b08c13e7ea158?apiKey=1d65eaa227da48a9908a318b50c4785b&",
+    "https://cdn.builder.io/api/v1/image/assets/TEMP/c983c2142cb80ea1262a504a8b01b87ac4c68eaaea272dc869cfa58a33d3333f?apiKey=1d65eaa227da48a9908a318b50c4785b&",
+    "https://cdn.builder.io/api/v1/image/assets/TEMP/38d6cb0e8b8cd630fb87860d2302a0e0c03af3ecfe1df239d1e262bd01450419?apiKey=1d65eaa227da48a9908a318b50c4785b&",
+    "https://cdn.builder.io/api/v1/image/assets/TEMP/de808fa852ea3d60b84261a3878504d31c7952cf41e34221928668afe2a2b830?apiKey=1d65eaa227da48a9908a318b50c4785b&",
+  ];
+
+  return (
+    <div className="flex flex-col w-full">
+      <Subscribe
+        socialIcons={socialIcons}
+        logo={logo}
+        paymentIcons={paymentIcons}
+      />
+      <Footer logo={logo} paymentIcons={paymentIcons} />
+    </div>
+  );
+};

@@ -1,0 +1,24 @@
+.radio {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio:hover {
+  border-color: var(--success);
+}
+
+.radio-checked {
+  border: 1.5px solid var(--success);
+}
+
+.inner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--success);
+}

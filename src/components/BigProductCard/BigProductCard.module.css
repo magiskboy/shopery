@@ -1,0 +1,6 @@
+.view-button, .like-button {
+    border-radius: 50%;
+    background-color: #D2D2D2;
+    width: 46px;
+    height: 46px;
+}

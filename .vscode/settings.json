@@ -1,0 +1,29 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.sideBar.location": "right",
+    "git.confirmSync": false,
+    "terminal.integrated.fontFamily": "Monaco Nerd Font Mono",
+    "editor.stickyScroll.enabled": false,
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    },
+    "explorer.confirmDelete": false,
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
+  }
+  

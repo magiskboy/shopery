@@ -1,0 +1,18 @@
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.checkbox:hover {
+  border-color: var(--success);
+}
+
+.checked {
+    background-color: var(--success);
+}
